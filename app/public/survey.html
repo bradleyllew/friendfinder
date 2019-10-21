@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -140,7 +140,7 @@
                 </select>
                 <br>
                 <br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id='submit'>
             </form>
         </div>
 
@@ -170,7 +170,8 @@
         </div>
     </div>
     <script type="text/javascript">
-        $("submit").on("click", function () {
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
             function validateForm() {
                 var isValid = true;
                 $(".form-control").each(function () {
@@ -196,9 +197,10 @@
                     ]
                 };
 
-                var currentURL = window.location.origin;
+                // var currentURL = window.location.origin;
 
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                $.post("/api/friends", userData, function (data) {
+                    console.log("Got Here");
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
                     $("#resultsModal").modal("toggle");
