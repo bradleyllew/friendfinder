@@ -13,7 +13,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
-        //    
+        console.log('req test', req.body)
         var totalDifference = 0;
         var bestMatch = {
             name: "",
@@ -26,6 +26,7 @@ module.exports = function (app) {
         var userName = userData.name;
         var userScores = userData.scores;
         console.log(userScores)
+    // "TypeError: Cannot read property 'map' of undefined" ---------- error bez can't find data???
         var b = userScores.map(function (item) {
             return parseInt(item, 10);
         });

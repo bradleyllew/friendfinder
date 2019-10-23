@@ -22,7 +22,7 @@
         <br>
 
         <div id="form">
-            <form action="/action_page.php">
+            <!-- <form> -->
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Required" required>
                 <br>
@@ -140,8 +140,8 @@
                 </select>
                 <br>
                 <br>
-                <input type="submit" value="Submit" id='submit'>
-            </form>
+                <button id='submit'>Submit</button>
+            <!-- </form> -->
         </div>
 
         <div id="resultsModal" class="modal fade" role="dialog">
@@ -172,33 +172,34 @@
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
             event.preventDefault();
+            console.log('here!')
             function validateForm() {
                 var isValid = true;
-                $(".form-control").each(function () {
-                    if ($(this).val() === "") isValid = false;
-                });
+                // $(".form-control").each(function () {
+                //     if ($(this).val() === "") isValid = false;
+                // });
                 return isValid;
             }
             // if all fields are filled
             if (validateForm() === true) {
                 // object to hold user data
                 var userData = {
-                    name: $("#name").val(),
+                    name: $("#fname").val(),
                     photo: $("#photo").val(),
                     scores: [
-                        $("q1").val(),
-                        $("q2").val(),
-                        $("q3").val(),
-                        $("q4").val(),
-                        $("q5").val(),
-                        $("q6").val(),
-                        $("q7").val(),
-                        $("q8").val(),
-                        $("q9").val(),
-                        $("q10").val()
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
                     ]
                 };
-
+console.log('user data', $("#fname").val())
                 // var currentURL = window.location.origin;
                 // to post data to the API -------NOT WORKING??????????--------------------
                 $.post("/api/friends", userData, function (data) {
