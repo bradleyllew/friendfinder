@@ -1,0 +1,15 @@
+.links {
+  color: aquamarine;
+}
+
+.links :hover {
+  color: pink;
+}
+
+.btn {
+  color: aquamarine;
+}
+
+.btn :hover {
+  color: pink;
+}

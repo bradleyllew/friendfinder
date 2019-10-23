@@ -179,7 +179,9 @@
                 });
                 return isValid;
             }
+            // if all fields are filled
             if (validateForm() === true) {
+                // object to hold user data
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
@@ -198,11 +200,12 @@
                 };
 
                 // var currentURL = window.location.origin;
-
+                // to post data to the API -------NOT WORKING??????????--------------------
                 $.post("/api/friends", userData, function (data) {
                     console.log("Got Here");
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
+                    // to show modal results
                     $("#resultsModal").modal("toggle");
                 })
             } else {
