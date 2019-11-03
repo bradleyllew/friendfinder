@@ -1,5 +1,5 @@
 .links {
-  color: aquamarine;
+  color: pink;
 }
 
 .links :hover {
@@ -7,9 +7,13 @@
 }
 
 .btn {
-  color: aquamarine;
+  color: pink;
 }
 
 .btn :hover {
   color: pink;
+}
+
+#resultsModal {
+  opacity: 100;
 }
