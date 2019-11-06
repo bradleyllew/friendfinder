@@ -2,7 +2,7 @@
 var friends = [
     {
         "name": "Homer",
-        "photo": "../public/images/homer-simpson-2-47033.jpg",
+        "photo": "images/homer-simpson-2-47033.jpg",
         "scores": [
             1,
             5,
@@ -18,7 +18,7 @@ var friends = [
     },
     {
         "name": "Marge",
-        "photo": "../public/images/marge-simpson-1-57074.jpg",
+        "photo": "images/marge-simpson-1-57074.jpg",
         "scores": [
             5,
             3,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         "name": "Bart",
-        "photo": "../public/images/bart-simpson-1-57193.jpg",
+        "photo": "images/bart-simpson-1-57193.jpg",
         "scores": [
             2,
             5,
@@ -50,7 +50,7 @@ var friends = [
     },
     {
         "name": "Lisa",
-        "photo": "../public/images/lisa-simpson-1-46483.jpg",
+        "photo": "images/lisa-simpson-1-46483.jpg",
         "scores": [
             3,
             1,
@@ -66,7 +66,7 @@ var friends = [
     },
     {
         "name": "Maggie",
-        "photo": "../public/images/maggie-simpson-1-46396.jpg",
+        "photo": "images/maggie-simpson-1-46396.jpg",
         "scores": [
             5,
             3,

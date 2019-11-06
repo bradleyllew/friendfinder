@@ -161,7 +161,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <button type="button" id="closeButton" class="btn btn-default" data-dismiss="modal">
                             Close
                         </button>
                     </div>
@@ -208,6 +208,7 @@
                     $("#matchImg").attr("src", data.photo);
                     // to show modal results
                     $("#resultsModal").modal("toggle");
+                    // $("#resultsModal").modal('hide');
                 })
             } else {
                 alert("Please fill out all REQUIRED fields");
